@@ -9,18 +9,6 @@ window.addEventListener('scroll', () => {
         navbar.style.boxShadow = 'none';
     }
 });
-
-// Function to toggle between the two images
-const imageCard = document.querySelector('.hero-image-card');
-const images = document.querySelectorAll('.hero-image');
-
-// Toggle Image on Click
-imageCard.addEventListener('click', () => {
-    images.forEach(image => {
-        image.classList.toggle('active');
-    });
-});
-
 // Toggle Light/Dark Mode
 const toggleBtn = document.querySelector('.mode-toggle');
 toggleBtn.addEventListener('click', () => {
