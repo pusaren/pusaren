@@ -136,9 +136,9 @@ body {
 
 /* Hero Text */
 .hero-text {
-    flex: 1.5;
-    max-width: 600px;
-    margin-left: 20px;
+    flex:auto;
+    max-width: 400px;
+    margin-left: 0px;
 }
 
 .hero-text h1 {
