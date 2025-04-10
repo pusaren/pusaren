@@ -126,10 +126,9 @@ body {
 }
 
 .hero-image-card {
-  width: 100%;
-  max-width: 500px;
+  width: 500px;
   height: 600px;
-  margin-left: 250px;
+  margin-left: 150px;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0, 255, 204, 0.2);
