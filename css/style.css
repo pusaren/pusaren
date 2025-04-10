@@ -285,7 +285,103 @@ body {
   font-size: 1rem;
   line-height: 1.7;
 }
+/* Skills Section */
+.skills-section {
+  margin-top: 50px;
+}
 
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.skill {
+  background: #212121;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skill h4 {
+  font-size: 20px;
+  color: #00b8d4;
+  margin-bottom: 15px;
+}
+/* Styling for h3 */
+h3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #00b8d4; /* Techy Blue */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #00b8d4; /* Underline effect */
+  padding-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for h3 */
+h3:hover {
+  color: #0288d1; /* Darker blue for hover effect */
+  border-color: #0288d1; /* Change underline color on hover */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+/* Styling h3 in the About Section */
+.about-section h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00b8d4;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* Styling h3 in the Services Page */
+.services-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00b8d4;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.skills-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00b8d4;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.skill p {
+  color: #b0b0b0;
+}
+
+.skill:hover {
+  background: #75ac38;
+  color: white;
+}
+
+.btn {
+  background: #00b8d4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #0288d1;
+}
 /* Projects Section */
 /* Projects Section */
 .projects-section {
@@ -309,6 +405,140 @@ body {
   font-size: 30px;
   color: #ccc;
 }
+
+/* Services Section */
+.services-section {
+  background: #0d1b2a;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-header h2 {
+  font-size: 36px;
+  color: #36f6b0;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.services-header p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.service-card {
+  background: #1f2a37;
+  border-radius: 8px;
+  padding: 30px;
+  flex: 1;
+  min-width: 500px;
+  height: 300px;
+  box-shadow: 0 5px 20px rgba(97, 250, 242, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure the content is spaced out properly */
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(129, 247, 197, 0.2);
+}
+
+.service-card h3 {
+  font-size: 22px;
+  color: #36f6b0;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 26px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f6f8f7;
+  color: #0d0e0d;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.request-form {
+  background: #16212b;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 40px auto 0;
+}
+
+.request-form h3 {
+  font-size: 28px;
+  color: #36f6b0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+  color: #fff;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  background: #1f2a37;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #36f6b0;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  .service-cards {
+    flex-direction: column;
+  }
+}
+
+
 /* Project Cards */
 .projects-content {
   display: flex;
@@ -329,7 +559,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 600px;
+  height: 700px;
 }
 .project-card:hover {
   transform: translateY(-10px);
@@ -448,7 +678,7 @@ body {
 
 /* Contact Form Styling */
 .contact-form {
-  background: rgba(255, 255, 255, 0.9);
+  background: #16212b;
   padding: 30px;
   margin-top: 40px;
   border-radius: 8px;
@@ -458,7 +688,7 @@ body {
 
 .contact-form h3 {
   font-size: 28px;
-  color: #333;
+  color:wheat;
   margin-bottom: 20px;
   animation: fadeIn 2s ease-in-out;
 }
@@ -470,7 +700,7 @@ body {
 .contact-form label {
   display: block;
   font-size: 16px;
-  color: #333;
+  color:wheat;
   margin-bottom: 5px;
 }
 
@@ -488,6 +718,7 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #28a745;
+  background-color: rgb(10, 10, 10);
   outline: none;
   transform: scale(1.02);
 }

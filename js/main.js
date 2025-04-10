@@ -132,4 +132,21 @@ async function sendMessage() {
         }
     }
 }
-
+// Initialize EmailJS
+(function() {
+    emailjs.init("y-kqJPw-TARRB_NCh");
+  })();
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    emailjs.sendForm('service_pesipu', 'template_pesipu', this)
+      .then(function(response) {
+        alert('Message sent successfully!');
+        document.getElementById('contact-form').reset();
+      }, function(error) {
+        alert('Failed to send message. Please try again!');
+      });
+  });
+  function selectService(serviceName) {
+    document.getElementById('service').value = serviceName;
+    document.getElementById('service-form').style.display = 'block';
+  }
