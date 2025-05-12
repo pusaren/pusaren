@@ -8,6 +8,7 @@
 /* Body Styles */
 body {
   font-family: "Arial", sans-serif;
+  padding-top: 80px; 
   background: linear-gradient(
     to right,
     #141e30,
@@ -22,6 +23,9 @@ body {
 /* Navbar Styling */
 .navbar {
   position: fixed;
+  margin-top: 0;
+  height: 70px;
+  padding: 10px 20px;
   top: 0;
   left: 0;
   width: 100%;
@@ -118,7 +122,7 @@ body {
 
 .hero-container {
   display: flex;
-  margin-top: 200px;
+  margin-top: 150px;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
@@ -126,7 +130,7 @@ body {
 }
 
 .hero-image-card {
-  width: 500px;
+  width: 600px;
   height: 700px;
   margin-left: 150px;
   border-radius: 15px;
@@ -804,6 +808,29 @@ h3:hover {
     margin: 0 10px;
   }
 }
+@media (max-width: 768px) {
+  .hero-text-card {
+    width: 90%;
+    margin: 20px auto;
+    height: auto;
+    padding: 20px;
+  }
+
+  .hero-text-card h1 {
+    font-size: 36px;
+  }
+
+  .hero-text-card h2 {
+    font-size: 28px;
+  }
+
+  .btn {
+    margin-left: 0;
+    display: block;
+    margin: 30px auto;
+  }
+}
+
 /* Chatbot Button Styling */
 .chatbot-btn {
   position: fixed;
