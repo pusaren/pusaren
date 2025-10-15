@@ -48,46 +48,109 @@ body {
 }
 
 /* Nav Links in Cards */
+.navbar {
+  background-color: #222;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 40px;
+}
+
 .nav-links {
-  display: flex;
-  gap: 20px;
   list-style: none;
+  display: flex;
   align-items: center;
+  gap: 20px;
 }
 
-.nav-links li a {
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
 }
 
-.nav-links li a i {
-  font-size: 18px;
-  margin-right: 8px; /* Spacing between icon and text */
-  text-decoration: none;
-  color: white;
+.nav-links a:hover {
+  background-color: #333;
+  border-radius: 5px;
 }
 
-.nav-links li a span {
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  position: relative;
+}
+
+.dropdown-menu a {
+  color: #000;
+  padding: 10px 15px;
   display: block;
-  margin-top: 0px;
-  padding: 8px 15px;
-  background: rgba(121, 193, 221, 0.2);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
-  font-weight: 500;
-  width: 150px;
-  transition: 0.3s ease;
-  backdrop-filter: blur(3px);
 }
 
-.nav-links li a:hover span {
-  background: rgba(18, 218, 11, 0.2);
-  color: rgb(18, 218, 11);
-  transform: translateY(-2px);
-  box-shadow: 0 0 10px rgba(18, 218, 11, 0.3);
+.dropdown-menu a:hover {
+  background-color: #eee;
 }
 
+/* Show dropdown on hover */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+/*show submenu dropdown*/
+.dropdown-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.dropdown-submenu li {
+  position: relative;
+}
+
+.dropdown-submenu a {
+  color: #000;
+  padding: 10px 15px;
+  display: block;
+}
+
+.dropdown-submenu a:hover {
+  background-color: #eee;
+}
+
+/* Submenu */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+  top: 0;
+  left: 100%;
+}
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
@@ -130,9 +193,9 @@ body {
 }
 
 .hero-image-card {
-  width: 600px;
-  height: 700px;
-  margin-left: 150px;
+  height:  800px;
+  width:600px;
+  margin-left: 10px;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0, 255, 204, 0.2);
@@ -165,29 +228,29 @@ body {
 }
 
 .hero-text-card h1 {
-  font-size: 60px;
+  font-size: 20px;
   color: #0ff;
   margin-bottom: 10px;
 }
 
 .hero-text-card h2 {
   color: #0ff;
-  font-size: 45px;
+  font-size: 20px;
   margin-top: 20px;
 }
 
 .slogan {
-  font-size: 30px;
+  font-size: 15px;
   color: rgb(197, 197, 197);
   margin-top: 10px;
 }
 
-.btn {
+.hero-text-card.btn {
   display: inline-block;
   margin-top: 30px;
   margin-left: 300px;
   padding: 10px 20px;
-  background: #0ff;
+  background: #28a745;
   font-size: 25px;
   color: #000;
   border-radius: 30px;
@@ -273,7 +336,7 @@ body {
 .ongoing-project-section h3 {
   color: #00ffcc;
   margin-bottom: 1rem;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .interests-section ul {
@@ -286,7 +349,7 @@ body {
 
 .ongoing-project-section p {
   color: #ccc;
-  font-size: 30px;
+  font-size: 15px;
   line-height: 1.7;
 }
 /* Skills Section */
@@ -371,7 +434,7 @@ h3:hover {
 }
 
 .btn {
-  background: #00b8d4;
+  background: #28a745;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -402,11 +465,11 @@ h3:hover {
 }
 
 .projects-header h2 {
-  font-size: 40px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 .projects-header p {
-  font-size: 30px;
+  font-size: 15px;
   color: #ccc;
 }
 
@@ -424,7 +487,7 @@ h3:hover {
 }
 
 .services-header h2 {
-  font-size: 36px;
+  font-size: 20px;
   color: #36f6b0;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -465,13 +528,13 @@ h3:hover {
 }
 
 .service-card h3 {
-  font-size: 22px;
+  font-size: 18px;
   color: #36f6b0;
   margin-bottom: 15px;
 }
 
 .service-card p {
-  font-size: 26px;
+  font-size: 18px;
   color: #ccc;
   margin-bottom: 20px;
 }
@@ -479,7 +542,7 @@ h3:hover {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background: #19b969;
+  background: #28a745;
   color: #0d0e0d;
   align-self: center;
   font-size: 14px;
@@ -499,7 +562,7 @@ h3:hover {
 }
 
 .request-form h3 {
-  font-size: 28px;
+  font-size: 17px;
   color: #36f6b0;
   margin-bottom: 20px;
   text-align: center;
@@ -549,36 +612,34 @@ h3:hover {
 .projects-content {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 50px;
-  justify-content: space-between;
-  gap: 30px;
-  margin-top: 10px;
+  margin-left: 0px;
+  gap: 10px;
+  margin-top: 5px;
 }
 .project-card {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  margin-left: 10px;
-  margin-top: 70px;
+  margin-left: 70px;
+  margin-top: 10px;
   width: 500px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 700px;
+  height: 280px;
 }
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 25px rgba(0, 255, 204, 0.4);
 }
 .project-card h3 {
-  font-size: 40px;
+  font-size: 10px;
   color: #00ffcc;
   margin-top: 30px;
   margin-bottom: 15px;
 }
 .project-card p {
-  font-size: 30px;
+  font-size: 20px;
   margin-left: 30px;
   color: #ccc;
   margin-bottom: 20px;
@@ -588,29 +649,29 @@ h3:hover {
   margin: 5px 0;
   color: #3498db;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 10px;
   transition: color 0.3s ease;
 }
 
 .project-links a:hover {
-  color: #e67e22;
+  color: #2225e6;
 }
 
 .project-card .btn {
-  background-color: #f39c12;
+  background-color: #28a745;
   color: white;
   border-radius: 25px;
   text-decoration: none;
   align-self: center;
-  width: 250px;
-  font-size: 30px;
+  width: 100px;
+  font-size: 10px;
   transition: background-color 0.3s ease;
-  margin-top: 10px;
-  margin-bottom: 70px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .project-card .btn:hover {
-  background-color: #e67e22;
+  background-color: #3db6db;
 }
 
 @media screen and (max-width: 768px) {
@@ -674,13 +735,13 @@ h3:hover {
 }
 
 .contact-header h2 {
-  font-size: 36px;
+  font-size: 20px;
   color: #fff;
   margin-bottom: 10px;
 }
 
 .contact-header p {
-  font-size: 18px;
+  font-size: 15px;
   color: #ddd;
 }
 
@@ -694,13 +755,24 @@ h3:hover {
   animation: slideIn 1s ease-out;
 }
 .contact-form h3 {
-  font-size: 28px;
+  font-size: 20px;
   color:wheat;
   margin-bottom: 20px;
   animation: fadeIn 2s ease-in-out;
 }
 .contact-form .form-group {
   margin-bottom: 15px;
+}
+.contact-form .btn {
+ flex-direction: center;
+ margin-top: 30px;
+  margin-left: 300px;
+  padding: 10px 20px;
+  background: #28a745;
+  font-size: 25px;
+  color: white;
+  border-radius: 30px;
+  transition: 0.3s;
 }
 .contact-form label {
   display: block;
@@ -712,7 +784,7 @@ h3:hover {
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  font-size: 16px;
+  font-size: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -733,7 +805,7 @@ h3:hover {
 }
 
 .social-links h3 {
-  font-size: 28px;
+  font-size: 17px;
   color: #fff;
   margin-bottom: 20px;
 }
@@ -947,6 +1019,7 @@ button:hover {
   }
 }
 
+
 /* Footer */
 footer {
   background-color: #2c3e50;
@@ -982,19 +1055,19 @@ footer .footer-section nav ul li {
 footer .footer-section nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   padding: 10px 15px;
   transition: color 0.3s ease;
 }
 
 footer .footer-section nav ul li a:hover {
-  color: #f39c12;
+  color: #19b969;
 }
 
 /* Contact Section */
 footer .footer-section .contact-info a {
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
   text-decoration: none;
   transition: color 0.3s ease;
   margin-bottom: 5px;
@@ -1013,7 +1086,7 @@ footer .footer-section .social-icons {
 
 footer .footer-section .social-icons a {
   color: #fff;
-  font-size: 30px;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
@@ -1023,7 +1096,7 @@ footer .footer-section .social-icons a:hover {
 
 footer .footer-section .social-icons-label {
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
   font-weight: bold;
 }

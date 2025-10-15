@@ -150,3 +150,20 @@ async function sendMessage() {
     document.getElementById('service').value = serviceName;
     document.getElementById('service-form').style.display = 'block';
   }
+   function requestPassKey(event) {
+      event.preventDefault();
+      const passkey = prompt("Enter pass key to access sensitive documents:");
+
+      if (passkey === "3915") {
+const newWindow = window.open('', '_blank');
+        newWindow.document.write(`
+          <h2>Protected Documents</h2>
+          <ul>
+            <li><a href="assets/ID.pdf" download>ID Document</a></li>
+            <li><a href="assets/KRA.pdf" download>KRA Document</a></li>
+          </ul>
+        `);
+      } else {
+        alert("Incorrect pass key. Access denied.");
+      }
+    }

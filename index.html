@@ -21,15 +21,36 @@
       <div class="logo-container">
         <img src="assets/logo.png" alt="Pusaren Logo" class="logo" />
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home"><i class="fa fa-home"></i><span>Home</span></a></li>
-          <li><a href="#about"><i class="fa fa-user"></i><span>About</span></a></li>
-          <li><a href="#projects"><i class="fa fa-briefcase"></i><span>Projects</span></a></li>
-          <li><a href="#contact"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
-          <li><a href="assets/cv.pdf" class="download-cv" download="Pusaren_CV"><i class="fa fa-download"></i><span>Download CV</span></a></li>
-        </ul>
-      </nav>
+     <nav>
+      <ul class="nav-links">
+        <li><a href="#home"><i class="fa fa-home"></i> <span>Home</span></a></li>
+        <li><a href="#about"><i class="fa fa-user"></i> <span>About</span></a></li>
+        <li><a href="#projects"><i class="fa fa-briefcase"></i> <span>Projects</span></a></li>
+        <li><a href="#contact"><i class="fa fa-envelope"></i> <span>Contact</span></a></li>
+
+        <!-- Dropdown -->
+        <li class="dropdown">
+          <a href="#"><i class="fa fa-download"></i> <span>Download</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="assets/CV@2025.pdf" download="Pusaren_CV">Download CV</a></li>
+
+            <!-- assets/CV@2025.pdf Submenu -->
+            <li class="dropdown-submenu">
+              <a href="#">Transcripts <i class="fa fa-caret-right"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="assets/CV@2025.pdf" download>First Year</a></li>
+                <li><a href="assets/CV@2025.pdf" download>Second Year</a></li>
+                <li><a href="assets/CV@2025.pdf" download>Third Year</a></li>
+                <li><a href="assets/CV@2025.pdf" download>Fourth Year</a></li>
+              </ul>
+            </li>
+
+            <!-- Other Documents with passkey -->
+            <li><a href="#" onclick="requestPassKey(event)">Other Documents</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     </header>    
     <section id="home" class="hero-section">
       <div class="hero-container">
